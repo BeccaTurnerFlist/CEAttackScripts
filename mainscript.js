@@ -13,6 +13,8 @@
 (function() {
     'use strict';
 
+    //testing if it updates
+
     // Initialize the MutationObserver
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
