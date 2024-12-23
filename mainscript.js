@@ -2,8 +2,8 @@
 // @name         AttackScript2.0
 // @namespace    http://tampermonkey.net/
 // @version      2024-12-21
-// @description  try to take over the world!
-// @author       You
+// @description  simple script to add an attack button to the enemies page in a game
+// @author       GELIN - 3779
 // @match        *cartelempire.online/Connections?*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cartelempire.online
 // @grant        none
