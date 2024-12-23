@@ -13,7 +13,7 @@
 (function() {
     'use strict';
 
-    //testing if it updates
+    //small test to see if greasyfork works
 
     // Initialize the MutationObserver
     const observer = new MutationObserver((mutations) => {
