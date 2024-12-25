@@ -7,13 +7,11 @@
 // @match        https://cartelempire.online/Connections?*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cartelempire.online
 // @grant        none
-// @license Mozilla Public License 2.0 
+// @license      Mozilla Public License 2.0 
 // ==/UserScript==
 
 (function() {
     'use strict';
-
-    //small test to see if greasyfork works
 
     // Initialize the MutationObserver
     const observer = new MutationObserver((mutations) => {
@@ -37,22 +35,16 @@
         // Select all rows that have the class 'row py-3 py-xl-2 g-2'
         const rows = document.querySelectorAll('.row.py-3.py-xl-2.g-2');
 
-     
         rows.forEach((row, i) => {
-           
             if (!row.querySelector('.header-button')) {
-
-                
                 const newCol = document.createElement('div');
                 newCol.classList.add('col-1'); // You can adjust the column width here (col-1 is a small column)
 
-             
                 const button = document.createElement('button');
                 button.classList.add('header-button'); // Optional: add a class for styling
-
-           
                 button.textContent = 'Attack';
 
+                // Add inline styles
                 button.style.marginLeft = '10px';
                 button.style.padding = '5px 10px';
                 button.style.backgroundColor = '#007bff';
@@ -60,8 +52,8 @@
                 button.style.border = 'none';
                 button.style.borderRadius = '5px';
                 button.style.cursor = 'pointer';
-                const userLink = row.querySelector('a.fw-bold');
 
+                const userLink = row.querySelector('a.fw-bold');
                 if (userLink) {
                     // Extract user ID from the href attribute (e.g., /user/3144)
                     const userIdMatch = userLink.getAttribute('href').match(/\/user\/(\d+)/);
@@ -83,13 +75,15 @@
                             submitButton.type = 'submit';
                             submitButton.textContent = 'Attack';
                             form.appendChild(submitButton);
+
+                            // Append the form to the document body and submit
                             document.body.appendChild(form);
                             form.submit();
                         });
                     }
                 }
 
-                
+                // Append the button to the new column and then to the row
                 newCol.appendChild(button);
                 row.appendChild(newCol);
             }
