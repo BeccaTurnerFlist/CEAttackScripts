@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AttackScript2.0
 // @namespace    cartelempire.online
-// @version      2024-12-21.3
+// @version      2024-12-21.4
 // @description  simple script to add an attack button to the enemies page in a game
 // @author       GELIN - 3779
 // @match        https://cartelempire.online/Connections?*
